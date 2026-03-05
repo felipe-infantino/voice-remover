@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "voice-remover"
-version = "0.1.1"
+version = "0.1.2"
 description = "Local vocal removal / audio source separation"
 authors = ["Felipe Infantino <felipe.infantino@icloud.com>"]
 readme = "README.md"
