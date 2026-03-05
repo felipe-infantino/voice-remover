@@ -5,6 +5,7 @@ import numpy as np
 import soundfile as sf
 import torch
 from pydub import AudioSegment
+from tqdm import tqdm
 
 from app.service.vocal_remover import nets
 
@@ -108,7 +109,7 @@ class Separator(object):
         with torch.no_grad():
             mask = []
             # To reduce the overhead, dataloader is not used.
-            for i in range(0, patches, self.batchsize):
+            for i in tqdm(range(0, patches, self.batchsize), desc="Separating audio"):
                 X_batch = X_dataset[i : i + self.batchsize]
                 X_batch = torch.from_numpy(X_batch).to(self.device)
 

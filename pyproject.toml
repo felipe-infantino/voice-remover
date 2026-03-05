@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "voice-remover"
-version = "0.1.0"
+version = "0.1.1"
 description = "Local vocal removal / audio source separation"
 authors = ["Felipe Infantino <felipe.infantino@icloud.com>"]
 readme = "README.md"
@@ -25,6 +25,7 @@ huggingface-hub = "^0.23"
 # Sources
 # ---------------------------------------------------------------------------
 # Default PyPI
+tqdm = "^4.67.3"
 [[tool.poetry.source]]
 name     = "pypi"
 priority = "primary"

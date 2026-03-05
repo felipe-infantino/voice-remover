@@ -48,6 +48,22 @@ poetry install
 poetry run voice-remover "track.mp3" ./outputs/
 ```
 
+### Extending with new pagackage 
+ 
+```bash
+poetry add [packagename]
+
+#check the cli is still working
+poetry run voice-remover "track.mp3" ./outputs/
+
+# Verify lockfile is clean
+poetry lock
+
+# Bump version
+poetry version patch   # or minor / major
+
+```
+
 ## License
 
 MIT
